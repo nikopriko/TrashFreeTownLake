@@ -14,7 +14,8 @@ li {
 nav {
   padding-top: 3%;
   padding-bottom: 3%;
-  
+  font-size: 120%;
+  width:100%;
   a {
     text-decoration: none;
     color: white;
@@ -25,47 +26,104 @@ nav {
   }
 }
 
+img {
+  height: 300px;
+  width: 300px;
+  margin: 4%;
+}
 
 .siteContainer {
-  width: 400px;
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .class1 {
   display: flex;
-  flex-direction: column;
   height: 300px;
+  width: 100%;
+  flex-direction: column;
   justify-content: space-between;
-  background-image: url("city.webp");
-  h1 {font-size: 31px;}
-  h2 {font-size: 18px;}
+  align-items: center;
+  background-image: url("city.webp"); 
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+
+h1 {font-size: 31px;}
+h2 {font-size: 18px;}
 
 .gallery {
-  height: 400px;
   display:flex;
   flex-direction: column;
+  align-items: center;
 }
+
+.galleryBox {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  }
+
 
 .blog {
-  width: 400px;
+  width: 80%;
   display:flex;
   flex-direction: column;
-  padding-top: 20px;
-  div {
-    margin: 10px;
-  }
-  h3 {
-    margin: 10px;
-  }
-}
+  padding: 40px;
+  align-items: center;
 
-.contact {
   ul {
     display:flex;
     flex-direction: column;
+    align-items: center;
   }
+}
+
+@media (min-width: 767px){
+  body {
+    background-color: rgb(118,170,212);
+  }
+  .class1 {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("city.webp"); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  h1 {font-size: 40px;}
+  h2{font-size: 28px;}
+
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+@media (min-width: 1280px){
+  body {
+    background-color: rgb(80,119,156);
+  }
+
+  nav {
+    padding: 2%;
+    margin: 0px;
+  }
+
+  .class1 {
+    height: 85vh;
+  }
+
+  h1 {font-size: 50px;}
+  h2 {font-size: 40px;}
 }
